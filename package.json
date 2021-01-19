@@ -1,0 +1,16 @@
+{
+  "name": "codemmunicating",
+  "version": "1.0.0",
+  "description": "Co[de]mmunicating source examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "author": "Chris Stead",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "clear": "^0.1.0",
+    "mocha": "^8.2.1"
+  }
+}
