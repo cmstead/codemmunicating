@@ -10,7 +10,7 @@ describe('FizzBuzz', function () {
 
     describe('return original value as a string when not divisible by 3 or 5', function () {
 
-        it('returns original value as a strin when not divisible by 3 or 5', function () {
+        it('returns original value as a string when not divisible by 3 or 5', function () {
             const inputValue = 7;
 
             const actualValue = fizzbuzz(inputValue);
@@ -89,8 +89,22 @@ describe('FizzBuzz', function () {
 
     describe(`only accepts positive integer values`, function () {
     
-        it('throws an error if value is 0', function () {
-            const inputValue
+        it('throws an error if value is less than 1', function () {
+            const inputValue = 0;
+
+            assert.throws(() => fizzbuzz(inputValue), 'Input must be an integer greater than 0');
+        });
+
+        it('throws an error if value is not an integer', function () {
+            const inputValue = 3.8;
+
+            assert.throws(() => fizzbuzz(inputValue), 'Input must be an integer greater than 0');
+        });
+
+        it('throws an error if value is not a number', function () {
+            const inputValue = null;
+
+            assert.throws(() => fizzbuzz(inputValue), 'Input must be an integer greater than 0');
         });
 
     });
